@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.game_container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.747);
+}
+.game_container h1 {
+  font-size: 40px;
+  color: #fff;
+  text-decoration: underline;
+  margin-bottom: 80px;
+}
+.game_container h1 span {
+  color: rgba(0, 206, 0, 0.842);
+}
+.game_board .cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 90px;
+}
+.game_board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+.game_board .cell:first-child,
+.game_board .cell:nth-child(2),
+.game_board .cell:nth-child(3) {
+  border-top: none;
+}
+.game_board .cell:nth-child(3n + 1) {
+  border-left: none;
+}
+.game_board .cell:nth-child(3n + 3) {
+  border-right: none;
+}
+.game_board .cell:last-child,
+.game_board .cell:nth-child(7),
+.game_board .cell:nth-child(8) {
+  border-bottom: none;
+}
+.game_status {
+  font-size: 30px;
+  margin: 20px 0;
+  color: rgba(0, 206, 0, 0.842);
+}
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid rgba(0, 206, 0, 0.842);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  background-color: rgba(0, 206, 0, 0.842);
+  color: #fff;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+button:hover {
+  background-color: transparent;
+}
+@media screen and (max-width: 300px) {
+  .game_board .cell {
+    width: 80px;
+    height: 80px;
+  }
+}
